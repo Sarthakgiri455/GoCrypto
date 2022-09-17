@@ -1,0 +1,2 @@
+> client - react application
+> smart_contract - solidity contract
