@@ -1,2 +1,7 @@
 > client - react application
 > smart_contract - solidity contract
+
+npm install --save-dev hardhat
+npx hardhat
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+npx hardhat test or compile
