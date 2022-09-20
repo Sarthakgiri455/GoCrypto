@@ -4,7 +4,7 @@ import { shortenAddress } from '../utils/shortenAddress'
 import useFetch from '../hooks/useFetch'
 
 const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, amount, url }) => {
-    const gifUrl = useFetch()
+    const gifUrl = useFetch(keyword)
 
     return (
         <div className='bg-[#181918] m-4 flex flex-1 
@@ -64,7 +64,7 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
 }
 
 const Transactions = () => {
-    const { currentAccount } = useContext(TransactionContext)
+    const { currentAccount, transactions } = useContext(TransactionContext)
 
     return (
         <div className='flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions'>
@@ -81,8 +81,8 @@ const Transactions = () => {
 
                 <div className='flex flex-wrap justify-center items-center mt-10'>
                     {/* .reverse to get latest transaction first, i is index */}
-                    {dummyData.reverse().map((transaction, i) => (
-                        <TransacionCard key={i} {...transaction} />
+                    {transactions.reverse().map((transaction, i) => (
+                        <TransactionCard key={i} {...transaction} />
                     ))}
                 </div>
             </div>

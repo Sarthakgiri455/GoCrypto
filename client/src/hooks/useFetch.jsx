@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 const API_KEY = import.meta.env.VITE_GIPHY_API
 
-const useFetch = ({ keyword }) => {
+const useFetch = (keyword) => {
     const [gifUrl, setGifUrl] = useState("");
 
     const fetchGifs = async () => {
@@ -13,7 +13,7 @@ const useFetch = ({ keyword }) => {
 
             setGifUrl(data[0]?.images?.downsized_medium?.url)
         } catch (error) {
-            setGifUrl('https://en.wikipedia.org/wiki/GIF') // demo url
+            setGifUrl('https://dribbble.com/shots/3063720-Not-Found') // demo url
         }
     }
 
