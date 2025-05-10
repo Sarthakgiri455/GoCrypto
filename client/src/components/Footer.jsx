@@ -29,7 +29,7 @@ const Footer = () => {
                     Come join us
                 </p>
                 <p className='text-white text-sm text-center'>
-                    Send a message : aniketkumarpaul1@gmail.com
+                    Send a message : girisarthak84@gmail.com
                 </p>
             </div>
 
